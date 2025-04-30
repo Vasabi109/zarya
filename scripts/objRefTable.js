@@ -1,0 +1,70 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.Sprite,
+		C3.Behaviors.solid,
+		C3.Behaviors.Bullet,
+		C3.Behaviors.destroy,
+		C3.Behaviors.Platform,
+		C3.Behaviors.Flash,
+		C3.Plugins.Keyboard,
+		C3.Plugins.Touch,
+		C3.Plugins.Text,
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Behaviors.Platform.Acts.SimulateControl,
+		C3.Plugins.System.Cnds.Every,
+		C3.Plugins.System.Exps.random,
+		C3.Plugins.Sprite.Acts.Spawn,
+		C3.Plugins.Sprite.Acts.SetAnimFrame,
+		C3.Plugins.System.Cnds.EveryTick,
+		C3.Plugins.Sprite.Acts.SetX,
+		C3.Plugins.Sprite.Exps.X,
+		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Sprite.Cnds.OnCollision,
+		C3.Behaviors.Flash.Acts.Flash,
+		C3.Plugins.System.Acts.SubVar,
+		C3.Plugins.System.Cnds.OnLayoutStart,
+		C3.Plugins.System.Acts.RestartLayout,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.Touch.Cnds.IsInTouch,
+		C3.Plugins.System.Acts.AddVar,
+		C3.Plugins.Sprite.Acts.Destroy
+	];
+};
+self.C3_JsPropNameTable = [
+	{Твёрдый: 0},
+	{Пуля: 0},
+	{УничтожениеВнеМакета: 0},
+	{Спрайт: 0},
+	{Платформер: 0},
+	{Мигание: 0},
+	{Спрайт2: 0},
+	{Клавиатура: 0},
+	{Спрайт3: 0},
+	{Спрайт4: 0},
+	{Спрайт5: 0},
+	{Спрайт6: 0},
+	{Спрайт7: 0},
+	{Спрайт8: 0},
+	{Спрайт9: 0},
+	{Спрайт10: 0},
+	{Тач: 0},
+	{Текст: 0},
+	{score: 0}
+];
+
+self.InstanceType = {
+	Спрайт: class extends self.ISpriteInstance {},
+	Спрайт2: class extends self.ISpriteInstance {},
+	Клавиатура: class extends self.IInstance {},
+	Спрайт3: class extends self.ISpriteInstance {},
+	Спрайт4: class extends self.ISpriteInstance {},
+	Спрайт5: class extends self.ISpriteInstance {},
+	Спрайт6: class extends self.ISpriteInstance {},
+	Спрайт7: class extends self.ISpriteInstance {},
+	Спрайт8: class extends self.ISpriteInstance {},
+	Спрайт9: class extends self.ISpriteInstance {},
+	Спрайт10: class extends self.ISpriteInstance {},
+	Тач: class extends self.IInstance {},
+	Текст: class extends self.ITextInstance {}
+}
